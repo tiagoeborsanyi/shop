@@ -22,8 +22,5 @@ class CounterProvider extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) {
-    // TODO: implement updateShouldNotify
-    throw UnimplementedError();
-  }
+  bool updateShouldNotify(InheritedWidget oldWidget) => true;
 }
