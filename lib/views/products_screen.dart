@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../widgets/app_drawer.dart';
 import '../providers/products.dart';
+import '../widgets/product_item.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class ProductsScreen extends StatelessWidget {
         padding: EdgeInsets.all(8),
         child: ListView.builder(
           itemCount: products.itemsCount,
-          itemBuilder: (ctx, i) => Text('TESTE'),
+          itemBuilder: (ctx, i) => ProductItem(products.items[i]),
         ),
       ),
     );
