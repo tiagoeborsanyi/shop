@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../widgets/app_drawer.dart';
 import '../providers/products.dart';
 import '../widgets/product_item.dart';
+import '../utils/app_routes.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({Key? key}) : super(key: key);
@@ -18,8 +19,10 @@ class ProductsScreen extends StatelessWidget {
         title: Text('Produtos'),
         actions: [
           IconButton(
-            onPressed: () {},
             icon: const Icon(Icons.add),
+            onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.PRODUCT_FORM);
+            },
           ),
         ],
       ),
